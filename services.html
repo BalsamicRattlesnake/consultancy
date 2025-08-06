@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - TechConsult</title>
+    <meta name="description" content="Explore comprehensive IT consultancy services including digital transformation, cybersecurity, cloud services, and managed IT solutions.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">TechConsult</a>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="nav-search">
+                <form id="searchForm">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Search..." class="search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="nav-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="about.html" class="mobile-nav-link">About Us</a>
+            <a href="services.html" class="mobile-nav-link active">Services</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <div class="mobile-search">
+                <form id="mobileSearchForm">
+                    <input type="text" id="mobileSearchInput" placeholder="Search..." class="mobile-search-input">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content text-center">
+                    <div class="hero-badge">Our Services</div>
+                    <h1 class="hero-title">
+                        Comprehensive IT Solutions
+                        <span class="hero-highlight"> for Your Business</span>
+                    </h1>
+                    <p class="hero-description">
+                        From digital transformation to cybersecurity, we offer end-to-end IT consultancy 
+                        services designed to drive your business forward and ensure technological excellence.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="services-section">
+            <div class="services-container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Expert Services</h2>
+                    <p class="section-description">
+                        Tailored solutions to meet your unique business challenges
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=250&fit=crop&crop=entropy&cs=tinysrgb" alt="Digital Transformation" class="service-img">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="service-price">Starting at $5,000/month</div>
+                            </div>
+                            <h3 class="service-title">Digital Transformation</h3>
+                            <p class="service-description">
+                                Modernize your business processes and embrace digital innovation
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Process Automation</li>
+                                <li><i class="fas fa-check"></i> Cloud Migration</li>
+                                <li><i class="fas fa-check"></i> Data Analytics</li>
+                                <li><i class="fas fa-check"></i> Digital Strategy</li>
+                                <li><i class="fas fa-check"></i> Change Management</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="window.location.href='contact.html'">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=250&fit=crop&crop=entropy&cs=tinysrgb" alt="IT Consulting" class="service-img">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="service-price">Starting at $3,000/month</div>
+                            </div>
+                            <h3 class="service-title">IT Consulting</h3>
+                            <p class="service-description">
+                                Strategic technology guidance to optimize your IT infrastructure
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> IT Strategy</li>
+                                <li><i class="fas fa-check"></i> System Integration</li>
+                                <li><i class="fas fa-check"></i> Vendor Management</li>
+                                <li><i class="fas fa-check"></i> Technology Assessment</li>
+                                <li><i class="fas fa-check"></i> IT Governance</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="window.location.href='contact.html'">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://media.istockphoto.com/id/1737674371/photo/concepts-shield-big-data-security-system.webp?a=1&b=1&s=612x612&w=0&k=20&c=c6sD1vPzFugrgWO_fiKk5hUtQ_AxITyznRodamElXbE=" alt="Cybersecurity" class="service-img">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="service-price">Starting at $4,000/month</div>
+                            </div>
+                            <h3 class="service-title">Cybersecurity</h3>
+                            <p class="service-description">
+                                Protect your business with advanced security solutions
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Risk Assessment</li>
+                                <li><i class="fas fa-check"></i> Security Audits</li>
+                                <li><i class="fas fa-check"></i> Compliance Management</li>
+                                <li><i class="fas fa-check"></i> Incident Response</li>
+                                <li><i class="fas fa-check"></i> Security Awareness Training</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="window.location.href='contact.html'">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://media.istockphoto.com/id/1420039843/photo/cloud-computing-backup-cyber-security-fingerprint-identity-encryption-technology.webp?a=1&b=1&s=612x612&w=0&k=20&c=D3xbPlE1_xbU5K6MUUK8aZbgkyFAVQuCtxe53YUeZho=" alt="Cloud Services" class="service-img">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <div class="service-price">Starting at $2,500/month</div>
+                            </div>
+                            <h3 class="service-title">Cloud Services</h3>
+                            <p class="service-description">
+                                Scalable cloud solutions for modern businesses
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Cloud Migration</li>
+                                <li><i class="fas fa-check"></i> Multi-Cloud Strategy</li>
+                                <li><i class="fas fa-check"></i> Cloud Optimization</li>
+                                <li><i class="fas fa-check"></i> Disaster Recovery</li>
+                                <li><i class="fas fa-check"></i> Cloud Security</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="window.location.href='contact.html'">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&crop=entropy&cs=tinysrgb" alt="Data Management" class="service-img">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="service-price">Starting at $3,500/month</div>
+                            </div>
+                            <h3 class="service-title">Data Management</h3>
+                            <p class="service-description">
+                                Unlock the power of your data with expert management solutions
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Data Strategy</li>
+                                <li><i class="fas fa-check"></i> Business Intelligence</li>
+                                <li><i class="fas fa-check"></i> Data Warehousing</li>
+                                <li><i class="fas fa-check"></i> Data Governance</li>
+                                <li><i class="fas fa-check"></i> Analytics Implementation</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="window.location.href='contact.html'">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="https://media.istockphoto.com/id/2148113350/photo/data-center-server-racks-it-modern-hardware-server-room-data-storage-center-database.webp?a=1&b=1&s=612x612&w=0&k=20&c=cF6jcs0cINAFok472uJjvjPX_k5qCsU4Ps0LxH2k470=" alt="Managed IT Services" class="service-img">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div class="service-price">Starting at $1,500/month</div>
+                            </div>
+                            <h3 class="service-title">Managed IT Services</h3>
+                            <p class="service-description">
+                                Comprehensive IT management and support
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> 24/7 Support</li>
+                                <li><i class="fas fa-check"></i> System Monitoring</li>
+                                <li><i class="fas fa-check"></i> Backup Solutions</li>
+                                <li><i class="fas fa-check"></i> Network Management</li>
+                                <li><i class="fas fa-check"></i> Help Desk Services</li>
+                            </ul>
+                            <button class="btn btn-outline" onclick="window.location.href='contact.html'">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process">
+            <div class="process-container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Process</h2>
+                    <p class="section-description">
+                        A structured approach to delivering exceptional results
+                    </p>
+                </div>
+
+                <div class="process-grid">
+                    <div class="process-card">
+                        <div class="process-number">01</div>
+                        <h3 class="process-title">Discovery</h3>
+                        <p class="process-description">Understanding your business needs and challenges</p>
+                    </div>
+
+                    <div class="process-card">
+                        <div class="process-number">02</div>
+                        <h3 class="process-title">Strategy</h3>
+                        <p class="process-description">Developing a comprehensive technology roadmap</p>
+                    </div>
+
+                    <div class="process-card">
+                        <div class="process-number">03</div>
+                        <h3 class="process-title">Implementation</h3>
+                        <p class="process-description">Executing solutions with minimal disruption</p>
+                    </div>
+
+                    <div class="process-card">
+                        <div class="process-number">04</div>
+                        <h3 class="process-title">Support</h3>
+                        <p class="process-description">Ongoing optimization and maintenance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries Section -->
+        <section class="industries">
+            <div class="industries-container">
+                <div class="section-header">
+                    <h2 class="section-title">Industries We Serve</h2>
+                    <p class="section-description">
+                        Specialized expertise across various business sectors
+                    </p>
+                </div>
+
+                <div class="industries-grid">
+                    <div class="industry-card">
+                        <div class="industry-icon">🏥</div>
+                        <h3 class="industry-title">Healthcare</h3>
+                    </div>
+
+                    <div class="industry-card">
+                        <div class="industry-icon">💰</div>
+                        <h3 class="industry-title">Finance</h3>
+                    </div>
+
+                    <div class="industry-card">
+                        <div class="industry-icon">🛍️</div>
+                        <h3 class="industry-title">Retail</h3>
+                    </div>
+
+                    <div class="industry-card">
+                        <div class="industry-icon">🏭</div>
+                        <h3 class="industry-title">Manufacturing</h3>
+                    </div>
+
+                    <div class="industry-card">
+                        <div class="industry-icon">🎓</div>
+                        <h3 class="industry-title">Education</h3>
+                    </div>
+
+                    <div class="industry-card">
+                        <div class="industry-icon">🏛️</div>
+                        <h3 class="industry-title">Government</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="cta-container">
+                <h2 class="cta-title">Ready to Transform Your Business?</h2>
+                <p class="cta-description">
+                    Let's discuss how our services can help you achieve your business goals.
+                </p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-secondary">
+                        Get Started Today
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="index.html" class="btn btn-secondary">
+                        View Case Studies
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3 class="footer-title">TechConsult</h3>
+                    <p class="footer-description">
+                        Leading IT consultancy firm providing innovative technology solutions to businesses worldwide. 
+                        We transform your digital challenges into competitive advantages.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 3240-2349</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@techconsult.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>3600 Stevens Creek Blvd<br>San Jose, CA 95117</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechConsult. All rights reserved. | <a href="#" class="footer-link">Privacy Policy</a> | <a href="#" class="footer-link">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

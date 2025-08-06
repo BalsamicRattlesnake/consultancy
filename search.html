@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - TechConsult</title>
+    <meta name="description" content="Search results for IT consultancy services and solutions.">
+    <!-- The original stylesheet link. Keep this for your base styles. -->
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Added CSS for the fade-in animation -->
+    <style>
+        /* * Animation Keyframes: Defines the "fadeInUp" animation.
+         * It transitions an element from being transparent and slightly lower 
+         * to fully opaque and in its original position.
+        */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px); /* Start 25px down */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* End at original position */
+            }
+        }
+
+        /* * This class is added to elements we want to animate.
+         * It prepares them by making them transparent before the animation starts.
+        */
+        .content-section {
+            opacity: 0; /* Start hidden */
+        }
+
+        /* * This class triggers the animation.
+         * It will be added by JavaScript when the page loads.
+         * The 'forwards' keyword ensures the element stays visible after the animation.
+        */
+        .animate-in {
+            animation: fadeInUp 0.7s ease-out forwards;
+        }
+
+        /* Basic styles for mobile menu functionality if script.js is removed */
+        .mobile-menu {
+            display: none; /* Hidden by default */
+            /* Add other styles for positioning, background etc. as in your styles.css */
+        }
+        .mobile-menu.is-open {
+            display: block; /* Show menu when 'is-open' class is present */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">TechConsult</a>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-search">
+                <form id="searchForm" action="search.html" method="get">
+                    <div class="search-container">
+                        <input type="text" name="q" id="searchInput" placeholder="Search..." class="search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                </form>
+            </div>
+
+            <div class="nav-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="about.html" class="mobile-nav-link">About Us</a>
+            <a href="services.html" class="mobile-nav-link">Services</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <div class="mobile-search">
+                <form id="mobileSearchForm" action="search.html" method="get">
+                    <input type="text" name="q" id="mobileSearchInput" placeholder="Search..." class="mobile-search-input">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- I've added the 'content-section' class to each section you want to animate -->
+        <section class="search-header content-section">
+            <div class="search-header-container">
+                <div class="search-breadcrumb">
+                    <a href="index.html" class="breadcrumb-link">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                    <h1 class="search-title">Search Results</h1>
+                </div>
+                
+                <div class="search-query">
+                    <div class="search-query-card">
+                        <i class="fas fa-search"></i>
+                        <span>Search results for:</span>
+                        <span class="search-term" id="searchTerm">"search term"</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="no-results content-section">
+            <div class="no-results-container">
+                <div class="no-results-card">
+                    <div class="no-results-icon">🔍</div>
+                    <h2 class="no-results-title">
+                        No results found for '<span id="noResultsTerm">search term</span>'
+                    </h2>
+                    <p class="no-results-description">
+                        We couldn't find any content matching your search term. Try searching with different keywords
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="suggested-pages content-section">
+            <div class="suggested-pages-container">
+                <div class="section-header">
+                    <h2 class="section-title">Popular Pages</h2>
+                    <p class="section-description">
+                        Explore our most visited pages and services
+                    </p>
+                </div>
+
+                <div class="suggested-pages-grid">
+                    <div class="suggested-page-card">
+                        <div class="suggested-page-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="suggested-page-title">Digital Transformation</h3>
+                        <a href="services.html" class="btn btn-outline">Visit Page</a>
+                    </div>
+
+                    <div class="suggested-page-card">
+                        <div class="suggested-page-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="suggested-page-title">About Our Company</h3>
+                        <a href="about.html" class="btn btn-outline">Visit Page</a>
+                    </div>
+
+                    <div class="suggested-page-card">
+                        <div class="suggested-page-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="suggested-page-title">IT Consulting Solutions</h3>
+                        <a href="services.html" class="btn btn-outline">Visit Page</a>
+                    </div>
+
+                    <div class="suggested-page-card">
+                        <div class="suggested-page-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="suggested-page-title">Cybersecurity Services</h3>
+                        <a href="services.html" class="btn btn-outline">Visit Page</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="help-section content-section">
+            <div class="help-container">
+                <div class="help-card">
+                    <div class="help-content">
+                        <h2 class="help-title">Need Help Finding Something?</h2>
+                        <p class="help-description">
+                            Our team is here to help you find the information you need. 
+                            Contact us for personalized assistance.
+                        </p>
+                        <div class="help-buttons">
+                            <a href="contact.html" class="btn btn-primary">Contact Support</a>
+                            <a href="services.html" class="btn btn-outline">Browse Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Footer content remains the same -->
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3 class="footer-title">TechConsult</h3>
+                    <p class="footer-description">
+                        Leading IT consultancy firm providing innovative technology solutions to businesses worldwide. 
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item"><i class="fas fa-phone"></i><span>+1 (555) 3240-2349</span></div>
+                        <div class="contact-item"><i class="fas fa-envelope"></i><span>info@techconsult.com</span></div>
+                        <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>3600 Stevens Creek Blvd<br>San Jose, CA 95117</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechConsult. All rights reserved. | <a href="#" class="footer-link">Privacy Policy</a> | <a href="#" class="footer-link">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 
+      The <script> tag that was linking to script.js has been replaced with this inline script.
+    -->
+    <script>
+        // This function runs once the entire HTML document has been loaded.
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- Animation Logic ---
+            // 1. Select all elements with the .content-section class.
+            const sections = document.querySelectorAll('.content-section');
+
+            // 2. Loop through each section.
+            sections.forEach((section, index) => {
+                // 3. Use setTimeout to apply the animation with a small delay.
+                // The delay increases for each section (index * 150ms),
+                // creating a staggered, professional-looking effect.
+                setTimeout(() => {
+                    section.classList.add('animate-in');
+                }, index * 150);
+            });
+
+            // --- Mobile Menu Logic ---
+            // This ensures your mobile menu still works without an external JS file.
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenuToggle && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-open'); // Toggles the menu visibility
+                });
+            }
+
+            // --- Dynamic Search Term Display ---
+            // This optional part reads the search query from the URL and displays it.
+            // For example, if the URL is "search.html?q=security", it will show "security".
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                const query = urlParams.get('q');
+                if (query) {
+                    const decodedQuery = decodeURIComponent(query.replace(/\+/g, ' '));
+                    document.getElementById('searchTerm').textContent = `"${decodedQuery}"`;
+                    const noResultsTerm = document.getElementById('noResultsTerm');
+                    if (noResultsTerm) {
+                        noResultsTerm.textContent = `'${decodedQuery}'`;
+                    }
+                } else {
+                    document.getElementById('searchTerm').textContent = `"IT Solutions"`;
+                }
+            } catch (e) {
+                console.error("Error handling search term:", e);
+                document.getElementById('searchTerm').textContent = `"IT Solutions"`;
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
